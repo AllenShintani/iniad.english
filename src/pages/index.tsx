@@ -33,8 +33,6 @@ const IndexPage: VFC = () => {
       children: [{ text: 'ここのテキストルールを変更する' }],
     },
   ]);
-  
-
 
   return (
     <>
