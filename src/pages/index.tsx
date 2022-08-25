@@ -14,7 +14,7 @@ import {
   HiOutlineArrowNarrowRight,
   HiSun,
 } from 'react-icons/hi';
-import { Node } from 'slate';
+import { Node } from 'slate';//ここをたどってルール変更
 import { Slate } from 'slate-react';
 
 import { Editable } from '../components/Editable/Editable';
@@ -27,17 +27,19 @@ const IndexPage: VFC = () => {
   const { direction, toggleDirection } = useDirection();
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const [value, setValue] = useState<Node[]>([
+  const [value, setValue] = useState<Node[]>([//typeを探す
     {
       type: 'paragraph',
-      children: [{ text: '' }],
+      children: [{ text: 'ここのテキストルールを変更する' }],
     },
   ]);
+  
+
 
   return (
     <>
       <Head>
-        <title>WriterLighter</title>
+        <title>INIAD IE</title>
       </Head>
       <ButtonGroup p="2" position="fixed" top="0" left="0">
         <Button variant="ghost" p="2">
