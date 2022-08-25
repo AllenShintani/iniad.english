@@ -17,7 +17,6 @@ const styles: Styles = {
     },
   },
 };
-
 export const theme = extendTheme({
   styles,
   config,
