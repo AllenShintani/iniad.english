@@ -30,9 +30,18 @@ const IndexPage: VFC = () => {
   const [value, setValue] = useState<Node[]>([//typeを探す
     {
       type: 'paragraph',
-      children: [{ text: 'ここのテキストルールを変更する' }],
+      text: 'ここ' ,
     },
   ]);
+  console.log(value)
+  const textContent = value[0].text
+  console.log(textContent)
+  
+  const general = () =>{
+  const a = /[A-Z]/.test('A')
+  console.log(a)
+    
+  }
 
   return (
     <>
@@ -49,7 +58,10 @@ const IndexPage: VFC = () => {
       <Slate
         editor={editor}
         value={value}
-        onChange={(newValue) => setValue(newValue)}
+        onChange={
+          (newValue) =>
+          setValue(newValue)
+        }//ここでテキスト更新
       >
         <Editable direction={direction} />
         <ButtonGroup p="2" position="fixed" bottom="0" right="0">
