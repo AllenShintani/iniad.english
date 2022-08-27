@@ -47,23 +47,6 @@ const IndexPage: VFC = () => {
   console.log(Box.name);
   console.log(Slate.name);
   general();
-  /*  s.addEventListener('keydown', input_tab)
-  function input_tab(event) {
-    if (event.key === 'Tab') {
-      // デフォルト動作停止
-      event.preventDefault()
-      //  タブを挿入。範囲指定時は置換。
-      const TAB = '\t'
-      const value = this.value
-      const sPos = this.selectionStart
-      const ePos = this.selectionEnd
-      const result = value.slice(0, sPos) + TAB + value.slice(ePos)
-      const cPos = sPos + TAB.length
-      this.value = result
-      this.setSelectionRange(cPos, cPos)
-    }
-  }
-
 
   /*  for (let i = 0; i < s.length; i++) {
     s[i].addEventListener('keydown', input_tab)
@@ -104,7 +87,7 @@ const IndexPage: VFC = () => {
         value={value}
         onChange={(newValue) => setValue(newValue)} //ここでテキスト更新
       >
-        <Editable direction={direction} />
+        <Editable direction={direction}></Editable>
         <ButtonGroup p="2" position="fixed" bottom="0" right="0">
           <IconButton
             colorScheme="gray"
