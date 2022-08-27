@@ -9,12 +9,12 @@ export const Editable: VFC<{ direction: 'vertical' | 'horizontal' }> = ({
   direction,
 }) => {
   useEffect(() => {
-    addEventListener('keyup', (eve) => {
-      if (eve.keyCode == 9) {
+    window.addEventListener('keydown', (event) => {
+      if (event.keyCode == 9) {
         event.preventDefault();
         console.log('tab');
       }
-      return removeEventListener('keyup', (eve) => {
+      return removeEventListener('keydown', (event) => {
         console.log();
       });
     });
