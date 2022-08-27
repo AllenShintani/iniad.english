@@ -17,6 +17,7 @@ export const Editable: VFC<{ direction: 'vertical' | 'horizontal' }> = ({
       flexDir={direction === 'vertical' ? 'row' : 'column'}
     >
       <SlateEditable
+        id="kai"
         placeholder="自由にお書き下さい。"
         style={{
           lineHeight: 2,
